@@ -1,0 +1,170 @@
+/* Define global variables */
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6; /* Primary text color */
+    --text-secondary: #ececec; /* Secondary text color */
+    --bg-primary: #23232e; /* Primary background color */
+    --bg-secondary: #141418; /* Secondary background color */
+    --transition-speed: 600ms; /* Speed for transitions */
+  }
+
+   /* Body styles */
+   body {
+    background-color: #2e2e35;
+    min-height: 100vh; /* Minimum height of the viewport */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Do not repeat background */
+    background-position: center; /* Center the background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font stack */
+  }
+
+  /* Styling for scrollbar */
+  body::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24; /* Track color */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #6649b8; /* Thumb color */
+  }
+  
+  /* Reset default margin and padding for all elements */
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery {
+    position: relative;
+    margin: 0px;
+    float: left;
+    width: 617px;
+    height: 617px;
+    border: 10px solid black;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desc {
+  position: absolute;
+  bottom: 0; /* Position the text at the bottom */
+  left: 0;
+  width: 100%; /* Make the text span the entire width of the container */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in width calculation */
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+  
+  /* Styles for logo link */
+  a.logo {
+    font-family: 'Honk', sans-serif; /* Font for logo */
+    font-size: 80px;
+  }
+  
+  /* Styles for navigation */
+  nav {
+    position: fixed; /* Lock the menu bar to the top */
+    top: 0; /* Align the menu bar to the top of the viewport */
+    width: 100%; /* Set the width to span the entire viewport */
+    background-color: black; /* Background color for navigation */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+    height: 3.3rem; /* Set the height of the menu bar */
+    z-index: 10; /* Ensure the menu bar appears above other content */
+}
+  
+  nav ul {
+    width: 100%; /* Full width */
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Display items in a row */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center vertically */
+  }
+  
+  nav li {
+    height: 54px; /* Set height for list items */
+  }
+  
+  nav a {
+    height: 100%; /* Full height for links */
+    padding: 0 20px; /* Padding for links */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Display items in a row */
+    align-items: center; /* Center vertically */
+    color: rgb(216, 216, 216); /* Text color */
+    font-size: 25px;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  
+  nav a:hover {
+    background-color: #C08B5C; /* Background color on hover */
+  }
+  
+  nav li:first-child {
+    margin-right: auto; /* Push the first list item to the left */
+  }
+  
+  .menu-button {
+    display: none; /* Initially hidden */
+  }
+
+  /* Style for delete button */
+.delete-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Style for delete button appearance */
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+  
+  /* Media query for Tablet or smaller screens */
+@media (max-width: 1273px) {
+  .gallery {
+      width: 100%; /* Set width to 100% for smaller screens */
+      float: none; /* Remove float */
+      margin: auto; /* Center the images */
+  }
+  a.logo {
+    font-size: 60px; /* Adjust font size for smaller screens */
+}
+nav {
+  height: 6rem; /* Set the height of the menu bar */
+}
+nav a {
+  font-size: 25px;
+}
+}
+
+/* Media query for Tablet or smaller screens */
+@media (max-width: 700px) { 
+  .gallery {
+    float: none; /* Remove float */
+      margin: auto; /* Center the images */
+  }
+  a.logo {
+    font-size: 100px;
+}
+nav a {
+  font-size: 40px;
+}
+}
